@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home</title>
+</head>
+<body>
+<h1>Welcome to the Booking Dashboard</h1>
+<h2>Logged in as: <span th:text="${username}">User</span>!</h2>
+<form action="/logout" method="post" th:action="@{/logout}">
+    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+    <button type="submit">Logout</button>
+</form>
+
+</body>
+</html>
